@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2382392C-DB98-546F-6E4F-EA7CF2867756}</ProjectGuid>
+    <ProjectGuid>{3CF82D05-2B45-3D9C-DC62-8ECE4747141C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CSection\GroundSpotlight.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundTrigger.cs" />
-     <Compile Include="Assets\Scripts\CSection\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\CSection\VaginaTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Player\InputController.cs" />
