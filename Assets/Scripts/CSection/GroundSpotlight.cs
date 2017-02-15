@@ -7,6 +7,7 @@ public class GroundSpotlight : MonoBehaviour {
 	[SerializeField] Light spotlight;
 	[SerializeField] Transform playerTransform;
 
+
 	public void Activate () {
 		StartCoroutine(ActivateSpotlightDelay(timeDelay));
 	}
