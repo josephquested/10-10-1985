@@ -8,11 +8,6 @@ public class SpermHead : MonoBehaviour {
 
 	void Start ()
 	{
-		// if (Random.Range(0, 2) == 0)
-		// {
-		// 	Destroy(audio);
-		// 	return;
-		// }
 		audio = GetComponent<AudioSource>();
 		AudioClip clip = sounds[Random.Range(0, sounds.Length)];
 		audio.clip = clip;
