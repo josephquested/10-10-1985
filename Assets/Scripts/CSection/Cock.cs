@@ -31,6 +31,7 @@ public class Cock : MonoBehaviour {
 
 	IEnumerator Cum ()
 	{
+		GetComponent<AudioSource>().Play();
 		for (int i = 0; i < quantity; i++)
 		{
 			var sperm = Instantiate(spermPrefab, urethra.position, urethra.rotation);
