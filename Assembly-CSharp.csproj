@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CSection\Cock.cs" />
      <Compile Include="Assets\Scripts\CSection\DecentTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundSpotlight.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundTrigger.cs" />
