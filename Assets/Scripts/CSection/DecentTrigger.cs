@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class DecentTrigger : MonoBehaviour {
 	public Animator fatherAnimator;
+	public Cock cock;
 
 	void OnTriggerEnter (Collider collider)
 	{
 		if (collider.tag == "Player")
 		{
-			print("triggered!");
-			fatherAnimator.speed = 1;
+			print("primed!");
+			cock.primed = true;
 		}
 	}
 }

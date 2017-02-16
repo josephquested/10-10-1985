@@ -8,6 +8,7 @@ public class Cock : MonoBehaviour {
 	public float stamina;
 	public bool canCum;
 	public int quantity;
+	public bool primed;
 
 	void Update ()
 	{
@@ -21,7 +22,10 @@ public class Cock : MonoBehaviour {
 	{
 		canCum = false;
 		yield return new WaitForSeconds(stamina);
-		Cum();
+		if (primed)
+		{
+			Cum();
+		}
 		canCum = true;
 	}
 
@@ -31,8 +35,9 @@ public class Cock : MonoBehaviour {
 		{
 			var sperm = Instantiate(spermPrefab, urethra.position, urethra.rotation);
 			Vector3 ejaculation = Vector3.forward;
-			float force = Random.Range(1, 10);
+			float force = Random.Range(1, 400);
 			sperm.GetComponent<Rigidbody>().AddForce(ejaculation * force);
+			Destroy(sperm, 40f);
 		}
 	}
 }

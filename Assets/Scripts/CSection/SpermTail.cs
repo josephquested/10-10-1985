@@ -11,7 +11,7 @@ public class SpermTail : MonoBehaviour {
 	}
 
 	void Update () {
-		Vector3 movement = new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f));
+		Vector3 movement = new Vector3(Random.Range(-50.0f, 50.0f), Random.Range(-50.0f, 50.0f), Random.Range(-5.0f, 5.0f));
 		rb.AddForce(movement);
 	}
 }
