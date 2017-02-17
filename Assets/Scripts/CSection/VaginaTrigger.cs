@@ -1,12 +1,20 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class VaginaTrigger : MonoBehaviour {
-
 	void OnTriggerEnter (Collider collider) {
 		if (collider.tag == ("Player"))
 		{
-			print("Entered the vagina!");
+			GetComponent<AudioSource>().Play();
+			GetComponent<FadeOut>().shouldFade = true;
+			StartCoroutine(ChangeScene());
 		}
+	}
+
+	IEnumerator ChangeScene ()
+	{
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("meadow");
 	}
 }
