@@ -19,7 +19,7 @@ public class FirstPersonController : MonoBehaviour {
 	[SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
 	[SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
 	[SerializeField] private float m_StepInterval;
-	[SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+	[SerializeField] public AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
 	[SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
 	[SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
@@ -36,6 +36,18 @@ public class FirstPersonController : MonoBehaviour {
 	private float m_NextStep;
 	private bool m_Jumping;
 	private AudioSource m_AudioSource;
+
+	public AudioClip sandClip1;
+	public AudioClip sandClip2;
+
+	public void ChangeFootsteps ()
+	{
+		m_FootstepSounds[0] = sandClip1;
+		m_FootstepSounds[1] = sandClip2;
+		m_JumpSound = sandClip1;
+		m_LandSound = sandClip2;
+		m_AudioSource.volume = 1f;
+	}
 
 	private void Start () {
 		m_CharacterController = GetComponent<CharacterController>();

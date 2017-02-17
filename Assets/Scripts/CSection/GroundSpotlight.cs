@@ -18,6 +18,7 @@ public class GroundSpotlight : MonoBehaviour {
 	}
 
 	public void ToggleLights (bool state) {
+		GetComponent<AudioSource>().Play();
 		spotlight.enabled = state;
 	}
 }

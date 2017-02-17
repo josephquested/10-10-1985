@@ -9,6 +9,7 @@ public class GroundTrigger : MonoBehaviour {
 	void OnTriggerEnter (Collider collider) {
 		if (collider.CompareTag("Player")) {
 			Destroy(fallAudio);
+			GameObject.FindWithTag("Player").GetComponent<FirstPersonController>().ChangeFootsteps();
 			spotlight.Activate();
 		}
 	}
