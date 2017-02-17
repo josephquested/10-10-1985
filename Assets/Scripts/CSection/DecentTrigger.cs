@@ -10,7 +10,6 @@ public class DecentTrigger : MonoBehaviour {
 	{
 		if (collider.tag == "Player")
 		{
-			print("primed!");
 			cock.primed = true;
 		}
 	}
