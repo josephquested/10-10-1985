@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cock : MonoBehaviour {
 	AudioSource audio;
+	ParticleSystem particals;
 
 	public Transform urethra;
 	public GameObject spermPrefab;
@@ -18,6 +19,7 @@ public class Cock : MonoBehaviour {
 	void Start ()
 	{
 		audio = GetComponent<AudioSource>();
+		particals = GetComponent<ParticleSystem>();
 	}
 
 	void Update ()
@@ -42,6 +44,7 @@ public class Cock : MonoBehaviour {
 	IEnumerator Cum ()
 	{
 		audio.clip = ejaculatoryGroan;
+		// particals.enableEmission = true;
 		audio.Play();
 		for (int i = 0; i < quantity; i++)
 		{
@@ -52,6 +55,7 @@ public class Cock : MonoBehaviour {
 			Destroy(sperm, 40f);
 			yield return new WaitForSeconds(0.03f);
 		}
+		// particals.enableEmission = false;
 		audio.clip = passiveMoan;
 		audio.Play();
 	}
