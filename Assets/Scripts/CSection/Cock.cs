@@ -16,6 +16,8 @@ public class Cock : MonoBehaviour {
 	public AudioClip passiveMoan;
 	public AudioClip ejaculatoryGroan;
 
+	bool bigLoad = true;
+
 	void Start ()
 	{
 		audio = GetComponent<AudioSource>();
@@ -43,8 +45,15 @@ public class Cock : MonoBehaviour {
 
 	IEnumerator Cum ()
 	{
+		if (bigLoad) {
+			quantity = 90;
+			bigLoad = false;
+		} else {
+			quantity = 10;
+			bigLoad = true;
+		}
+
 		audio.clip = ejaculatoryGroan;
-		// particals.enableEmission = true;
 		audio.Play();
 		for (int i = 0; i < quantity; i++)
 		{
@@ -53,7 +62,7 @@ public class Cock : MonoBehaviour {
 			float force = Random.Range(1, 200);
 			sperm.GetComponent<Rigidbody>().AddForce(ejaculation * force);
 			Destroy(sperm, 40f);
-			yield return new WaitForSeconds(0.03f);
+			yield return new WaitForSeconds(0.06f);
 		}
 		// particals.enableEmission = false;
 		audio.clip = passiveMoan;
