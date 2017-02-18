@@ -13,6 +13,7 @@ public class FadeOut : MonoBehaviour {
 	private float alpha = 0.0f;
 	private int fadeDir = -1;
 
+
 	void OnGUI()
 	{
 		if (shouldFade)

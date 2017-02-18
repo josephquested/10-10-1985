@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CSection\FadeOut.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundSpotlight.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundTrigger.cs" />
+     <Compile Include="Assets\Scripts\CSection\RestoreGUI.cs" />
      <Compile Include="Assets\Scripts\CSection\SpermHead.cs" />
      <Compile Include="Assets\Scripts\CSection\SpermTail.cs" />
      <Compile Include="Assets\Scripts\CSection\VaginaTrigger.cs" />

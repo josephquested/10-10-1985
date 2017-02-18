@@ -59,10 +59,10 @@ public class Cock : MonoBehaviour {
 		{
 			var sperm = Instantiate(spermPrefab, urethra.position, urethra.rotation);
 			Vector3 ejaculation = Vector3.forward;
-			float force = Random.Range(1, 200);
+			float force = Random.Range(50, 300);
 			sperm.GetComponent<Rigidbody>().AddForce(ejaculation * force);
 			Destroy(sperm, 40f);
-			yield return new WaitForSeconds(0.06f);
+			yield return new WaitForSeconds(0.04f);
 		}
 		// particals.enableEmission = false;
 		audio.clip = passiveMoan;
