@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Cock : MonoBehaviour {
 	AudioSource audio;
-	ParticleSystem particals;
 
 	public Transform urethra;
 	public GameObject spermPrefab;
@@ -21,7 +20,6 @@ public class Cock : MonoBehaviour {
 	void Start ()
 	{
 		audio = GetComponent<AudioSource>();
-		particals = GetComponent<ParticleSystem>();
 	}
 
 	void Update ()
