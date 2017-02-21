@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CSection\AcentTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\Cock.cs" />
+     <Compile Include="Assets\Scripts\CSection\Credits.cs" />
      <Compile Include="Assets\Scripts\CSection\DecentTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\EndTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeOut.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\Scripts\CSection\SpermHead.cs" />
      <Compile Include="Assets\Scripts\CSection\SpermTail.cs" />
      <Compile Include="Assets\Scripts\CSection\VaginaTrigger.cs" />
+     <Compile Include="Assets\Scripts\CSection\WindyJump.cs" />
      <Compile Include="Assets\Scripts\Player\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Player\InputController.cs" />
      <Compile Include="Assets\Scripts\Player\InteractionController.cs" />

@@ -9,12 +9,13 @@ public class AcentTrigger : MonoBehaviour {
 	{
 		if (collider.tag == "Player")
 		{
-			DestroyWorld();
+			StartCoroutine(DestroyWorld());
 		}
 	}
 
-	void DestroyWorld ()
+	IEnumerator DestroyWorld ()
 	{
+		yield return new WaitForEndOfFrame();
 		Destroy(terrain);
 	}
 }
