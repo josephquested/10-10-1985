@@ -11,6 +11,7 @@ public class GroundTrigger : MonoBehaviour {
 			Destroy(fallAudio);
 			GameObject.FindWithTag("Player").GetComponent<FirstPersonController>().ChangeFootsteps();
 			spotlight.Activate();
+			Destroy(this);
 		}
 	}
 }
