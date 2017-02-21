@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/c-section.unity
+- path: Assets/Scenes/meadow.unity
   isLoaded: 1
   isActive: 1
