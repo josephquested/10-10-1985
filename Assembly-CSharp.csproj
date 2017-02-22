@@ -48,8 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CSection\AcentTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\Cock.cs" />
+     <Compile Include="Assets\Scripts\CSection\CreditSequence.cs" />
      <Compile Include="Assets\Scripts\CSection\DecentTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\EndTrigger.cs" />
+     <Compile Include="Assets\Scripts\CSection\FadeInAudio.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeOut.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeText.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundSpotlight.cs" />

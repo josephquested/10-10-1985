@@ -10,16 +10,14 @@ public class FadeText : MonoBehaviour {
       VanishText(GetComponent<Text>());
     }
 
-    void Update()
+    public void FadeIn ()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StartCoroutine(FadeTextToFullAlpha(speed, GetComponent<Text>()));
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(FadeTextToZeroAlpha(speed, GetComponent<Text>()));
-        }
+      StartCoroutine(FadeTextToFullAlpha(speed, GetComponent<Text>()));
+    }
+
+    public void FadeOut ()
+    {
+      StartCoroutine(FadeTextToZeroAlpha(speed, GetComponent<Text>()));
     }
 
     void VanishText (Text i)
@@ -30,7 +28,6 @@ public class FadeText : MonoBehaviour {
 
     public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
-      print("faded");
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
         while (i.color.a < 1.0f)
         {

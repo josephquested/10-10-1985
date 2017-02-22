@@ -22,9 +22,9 @@ public class EndTrigger : MonoBehaviour {
 		{
 			natureAudio.volume -= 0.001f;
 			playerAudio.volume -= 0.001f;
-			print("fading");
 			yield return new WaitForSeconds(0.01f);
 		}
+		yield return new WaitForSeconds(5f);
 		SceneManager.LoadScene("credits");
 	}
 }
