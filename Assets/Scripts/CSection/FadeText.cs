@@ -2,25 +2,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class FadeText : MonoBehaviour
-{
-// can ignore the update, it's just to make the coroutines get called for example
+public class FadeText : MonoBehaviour {
+    public float speed;
+
+    void Awake ()
+    {
+      VanishText(GetComponent<Text>());
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
+            StartCoroutine(FadeTextToFullAlpha(speed, GetComponent<Text>()));
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
+            StartCoroutine(FadeTextToZeroAlpha(speed, GetComponent<Text>()));
         }
     }
 
+    void VanishText (Text i)
+    {
 
+      i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
+    }
 
     public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
+      print("faded");
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
         while (i.color.a < 1.0f)
         {
