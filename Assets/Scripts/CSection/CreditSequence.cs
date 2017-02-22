@@ -18,6 +18,18 @@ public class CreditSequence : MonoBehaviour {
 		StartCoroutine(RunCredits());
 	}
 
+	void Update ()
+	{
+		if (Input.GetKeyDown("q"))
+		{
+			Quit();
+		}
+		if (Input.GetKeyDown("r"))
+		{
+			Restart();
+		}
+	}
+
 	IEnumerator RunCredits ()
 	{
 		yield return new WaitForSeconds(13f);
