@@ -14,8 +14,17 @@ public class FadeText : MonoBehaviour {
       }
       else
       {
-        FadeOut();
+        VanishText(GetComponent<Text>());
+        StartCoroutine(InandOut());
       }
+    }
+
+    IEnumerator InandOut ()
+    {
+      yield return new WaitForSeconds(5f);
+      FadeIn();
+      yield return new WaitForSeconds(5f);
+      FadeOut();
     }
 
     public void FadeIn ()
