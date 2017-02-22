@@ -17,8 +17,13 @@ public class EndTrigger : MonoBehaviour {
 
 	IEnumerator FadeOutAudio ()
 	{
-		natureAudio.volume -= 0.01f;
-		playerAudio.volume -= 0.01f;
-		yield return new WaitForSeconds(0.01f);
+		while (natureAudio.volume >= 0 && playerAudio.volume >= 0)
+		{
+			natureAudio.volume -= 0.001f;
+			playerAudio.volume -= 0.001f;
+			print("fading");
+			yield return new WaitForSeconds(0.01f);
+		}
+		print("done fading!");
 	}
 }
