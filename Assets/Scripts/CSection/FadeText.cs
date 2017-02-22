@@ -4,10 +4,18 @@ using System.Collections;
 
 public class FadeText : MonoBehaviour {
     public float speed;
+    public bool fadeOnAwake;
 
     void Awake ()
     {
-      VanishText(GetComponent<Text>());
+      if (!fadeOnAwake)
+      {
+        VanishText(GetComponent<Text>());
+      }
+      else
+      {
+        FadeOut();
+      }
     }
 
     public void FadeIn ()
