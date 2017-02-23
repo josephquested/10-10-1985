@@ -23,7 +23,7 @@ public class FadeText : MonoBehaviour {
     {
       yield return new WaitForSeconds(5f);
       FadeIn();
-      yield return new WaitForSeconds(5f);
+      yield return new WaitForSeconds(6f);
       FadeOut();
     }
 

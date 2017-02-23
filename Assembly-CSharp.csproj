@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\CSection\EndTrigger.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeInAudio.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeOut.cs" />
+     <Compile Include="Assets\Scripts\CSection\FadeOutAudio.cs" />
      <Compile Include="Assets\Scripts\CSection\FadeText.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundSpotlight.cs" />
      <Compile Include="Assets\Scripts\CSection\GroundTrigger.cs" />

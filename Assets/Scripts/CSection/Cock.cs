@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cock : MonoBehaviour {
-	AudioSource audio;
+	AudioSource cockAudio;
 
 	public Transform urethra;
 	public GameObject spermPrefab;
@@ -19,7 +19,7 @@ public class Cock : MonoBehaviour {
 
 	void Start ()
 	{
-		audio = GetComponent<AudioSource>();
+		cockAudio = GetComponent<AudioSource>();
 	}
 
 	void Update ()
@@ -51,8 +51,8 @@ public class Cock : MonoBehaviour {
 			bigLoad = true;
 		}
 
-		audio.clip = ejaculatoryGroan;
-		audio.Play();
+		cockAudio.clip = ejaculatoryGroan;
+		cockAudio.Play();
 		for (int i = 0; i < quantity; i++)
 		{
 			var sperm = Instantiate(spermPrefab, urethra.position, urethra.rotation);
@@ -63,7 +63,7 @@ public class Cock : MonoBehaviour {
 			yield return new WaitForSeconds(0.04f);
 		}
 		// particals.enableEmission = false;
-		audio.clip = passiveMoan;
-		audio.Play();
+		cockAudio.clip = passiveMoan;
+		cockAudio.Play();
 	}
 }
